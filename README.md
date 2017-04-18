@@ -1,1 +1,1 @@
-# react-redux-navigation
+# react-redux-mapping

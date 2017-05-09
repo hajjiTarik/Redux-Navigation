@@ -57,9 +57,9 @@ class NavigationManager {
    * @param {String} value
    * @returns {String}
    * @example
-   * updateQueryString('www.exemple.com/?foo=bar','toto',1) -> www.exemple.com/?foo=bar&toto=1
+   * updateQueryString('www.example.com/?foo=bar','toto',1) -> www.example.com/?foo=bar&toto=1
    * @example
-   * updateQueryString('www.exemple.com/','toto',1) -> www.exemple.com/?toto=1
+   * updateQueryString('www.example.com/','toto',1) -> www.example.com/?toto=1
    */
   updateQueryString = (url, key, value) => {
     const regexp = new RegExp(`([?&])${key}=.*?(&|#|$)`, 'i');

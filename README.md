@@ -1,1 +1,1 @@
-# react-redux-mapping
+# React Redux Mapping

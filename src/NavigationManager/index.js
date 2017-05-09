@@ -4,7 +4,7 @@ import exenv from 'exenv';
 class NavigationManager {
   constructor() {
     if (!exenv.canUseDOM) return;
-    this.navigationPrefix = 'nav';
+    this.navigationPrefix = 'navigation';
   }
 
   /**

@@ -1,20 +1,22 @@
 import navigation from '../';
-import
+import * as constants from '../constants';
+import { getPreviousPathSelector } from '../selector';
+
 function actionHandler(type, action, cb){
   if (type === action.type) cb();
   return false;
 }
-function closePage({ page }, store) {
-  if (!page) return;
-  store.dispatch({ type: 'CURRENT', page})
+function openPage({ page }, store) {
+  if (!page) return false;
+  store.dispatch({ type: 'CURRENT', page });
   return ()=>{
-    navigation.handleClose()
-  }
+    navigation.handleOpen(page, getPreviousPath());
+  };
 }
 const navigationMiddleware = store => next => (action) => {
-  actionHandler('CLOSE_PAGE', action, closePage(action, store));
+  actionHandler(constants.NAVIGATION_CLOSE_PAGE, action, openPage(action, store));
 
   return next(action);
-}
+};
 
 export default navigationMiddleware;

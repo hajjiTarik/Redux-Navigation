@@ -1,4 +1,3 @@
-import isEmpty from 'ramda/src/isEmpty';
 import exenv from 'exenv';
 
 class NavigationManager {
@@ -24,7 +23,7 @@ class NavigationManager {
    * @returns {Object} from a token to describe the current path of the navigation
    */
   decodeRouterUrl = (url) => {
-    if (isEmpty(url)) return false;
+    if (!url) return false;
     const decodeResult = window.atob(url);
     return JSON.parse(decodeResult);
   }

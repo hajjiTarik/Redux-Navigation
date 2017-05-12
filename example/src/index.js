@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './store/';
+import store from './store';
 import Navigation from './navigation';
 
 export class App extends React.Component {

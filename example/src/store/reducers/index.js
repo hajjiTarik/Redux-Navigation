@@ -1,3 +1,3 @@
-export default (state = {}, aciton) => {
+export default (state = {}, action) => {
   return state;
 }

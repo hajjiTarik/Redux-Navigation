@@ -1,6 +1,6 @@
 # React 3R (React-Redux-Router)
 
 ## Installation
-``js
+```js
 npm install redux-navigation --save
-``
+```

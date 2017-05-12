@@ -1,4 +1,4 @@
-# REDUX NAVIGATION (React-Redux-Router)
+# REDUX NAVIGATION
 
 ## Installation
 ```js

@@ -5,14 +5,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack src/index.js dist/bundle.js",
-    "build:dev": "webpack example/src/index.js example/dist/bundle.js"
+    "build:dev": "webpack example/src/index.js example/dist/bundle.js",
+    "lint": "eslint src/NavigationManager/*/**.js"
   },
   "author": "Hajji Tarik",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.3.15",
-    "babel-eslint": "^7.2.1",
+    "babel-eslint": "^6.1.2",
     "babel-jest": "^18.0.0",
     "babel-loader": "^6.2.0",
     "babel-plugin-check-es2015-constants": "^6.3.13",
@@ -57,6 +58,7 @@
   "dependencies": {
     "babel": "^6.23.0",
     "eslint": "^3.19.0",
+    "exenv": "^1.2.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",

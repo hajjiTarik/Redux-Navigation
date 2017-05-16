@@ -2,7 +2,7 @@ import navigation from '../';
 import * as constants from '../constants';
 import { getPreviousPath, getCurrentPath } from '../selectors';
 
-function actionHandler(type, action, cb){
+function actionHandler(type, action, cb) {
   if (!type) return false;
   const actionTypes = type instanceof Array ? type : [type];
   actionTypes.map((actionType) => {

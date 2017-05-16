@@ -1,7 +1,7 @@
-import navigationMgr from './NavigationManager';
-import navigatoonMiddleware from './NavigationManager/middleware';
+import navigationMiddleware from './middleware';
+import navigationCore from './core';
 
 export default {
-  navigationMgr,
   navigationMiddleware,
-}
+  navigationCore,
+};

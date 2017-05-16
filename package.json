@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack src/index.js dist/bundle.js",
     "build:dev": "webpack example/src/index.js example/dist/bundle.js",
-    "lint": "eslint src/NavigationManager/*/**.js"
+    "lint": "eslint src/*/**.js"
   },
   "author": "Hajji Tarik",
   "license": "ISC",

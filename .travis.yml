@@ -4,9 +4,9 @@ node_js:
   - "6"
   - "7"
 script:
+  - npm run build
   - npm run build:dev
-  - npm run build:prod
-  - npm run lint:js
+  - npm run lint
 branches:
   only:
     - master

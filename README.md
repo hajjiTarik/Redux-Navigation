@@ -1,5 +1,5 @@
 # REDUX NAVIGATION
-![build status](https://travis-ci.org/hajjiTarik/Redux-Navigation.svg?branch=master)
+![build status](https://travis-ci.org/hajjiTarik/Redux-Navigation.svg?branch=develop)
 
 ## WIP
 ## Installation

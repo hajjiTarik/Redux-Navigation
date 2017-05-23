@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack src/index.js dist/bundle.js",
-    "build:dev": "webpack example/src/index.js example/dist/bundle.js",
+    "build": "cross-env NODE_ENV=production webpack --hide-modules --progress --config config/webpack.config.js",
+    "build:dev": "cross-env NODE_ENV=development webpack --hide-modules --progress --config config/webpack.config.js",
+    "start": "webpack-dev-server --progress --quiet --cache config/webpack.config.js",
     "lint": "eslint src/*/**.js"
   },
   "author": "Hajji Tarik",
@@ -44,7 +45,7 @@
     "babel-preset-stage-0": "^6.22.0",
     "babel-register": "^6.3.13",
     "check-es3-syntax-cli": "^0.1.1",
-    "cross-env": "^3.1.4",
+    "cross-env": "^3.2.4",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",

@@ -33,12 +33,11 @@ module.exports = {
     port: 9000,
     host: 'localhost',
     setup: (app) => {
+      app.set('views', paths.templatesDirectory);
       app.set('view engine', 'ejs');
-
-      app.get('/', (_, res) => {
-        console.log(res);
-        return res.render('index');
-      });
+      app.get('/', (_, res) => (
+        res.render('index')
+      ));
     },
   },
   plugins: [

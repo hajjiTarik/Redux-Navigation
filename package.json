@@ -4,9 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cross-env NODE_ENV=production webpack --hide-modules --progress --config config/webpack.config.js",
-    "build:dev": "cross-env NODE_ENV=development webpack --hide-modules --progress --config config/webpack.config.js",
-    "start": "webpack-dev-server --hot --progress --quiet --cache --config config/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --hide-modules --progress --config config/webpack.module.config.js",
+    "build:dev": "cross-env NODE_ENV=development webpack --hide-modules --progress --config config/webpack.public.config.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --quiet --cache --config config/webpack.server.config.js",
     "lint": "eslint src/*/**.js"
   },
   "author": "Hajji Tarik",
@@ -56,7 +56,8 @@
     "express": "^4.15.2",
     "html-loader": "^0.4.5",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {
     "babel": "^6.23.0",
@@ -66,10 +67,19 @@
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "webpack": "^2.4.1"
+    "webpack": "^2.4.1",
+    "webpack-merge": "^4.1.0"
   },
   "directories": {
     "example": "example"
   },
-  "description": ""
+  "description": "![build status](https://travis-ci.org/hajjiTarik/Redux-Navigation.svg?branch=develop)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hajjiTarik/react-redux-navigation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hajjiTarik/react-redux-navigation/issues"
+  },
+  "homepage": "https://github.com/hajjiTarik/react-redux-navigation#readme"
 }

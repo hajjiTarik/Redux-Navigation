@@ -1,17 +1,13 @@
 import React from 'react';
 
 export default class Navigation extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+  renderList = () => [1,2,3,4].map((el)=>(<li key={el}>Level {el}</li>));
   render() {
+    console.log(this.renderList());
     return (
       <ul>
         {this.props.title}
-        <li>Level 2</li>
-        <li>Level 5</li>
-        <li>Level 6</li>
+        {this.renderList()}
       </ul>
     );
   }

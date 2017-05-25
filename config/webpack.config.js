@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var env = process.env.NODE_ENV;
 var path = require('path');
+var paths = require('./paths.js');
 
 const rootFolder = path.join(__dirname, '../');
 module.exports = {
@@ -24,7 +25,7 @@ module.exports = {
     path: path.resolve(path.join(rootFolder, 'build')),
   },
   devServer: {
-    contentBase: path.join(__dirname, '../example'),
+    contentBase: paths.output,
     compress: true,
     hot: true,
     overlay: true,
@@ -36,7 +37,9 @@ module.exports = {
       app.set('views', paths.templatesDirectory);
       app.set('view engine', 'ejs');
       app.get('/', (_, res) => (
-        res.render('index')
+        res.render('index',{
+          asset: 'bundle.js',
+        })
       ));
     },
   },

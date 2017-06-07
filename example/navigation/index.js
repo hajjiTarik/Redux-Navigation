@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
-export default class Navigation extends React.Component {
-  renderList = () => [1,2,3,4].map((el)=>(<li key={el}>Level {el}</li>));
+class Navigation extends Component {
+  static PropTypes = {
+    dispatch: PropTypes.func,
+  }
+  handleOpen(index) {
+    this.props.dispatch({ type: 'OPEN_PAGE', index });
+  }
+  renderList = () => [1,2,3,4]
+    .map((element, index)=> (
+        <li onClick={() => { this.handleOpen(index); }} key={element}>
+          <a href="#">Level {element}</a>
+        </li>
+      ),
+    );
   render() {
     console.log(this.renderList());
     return (
@@ -12,3 +25,5 @@ export default class Navigation extends React.Component {
     );
   }
 }
+
+export default connect(null, null)(Navigation);

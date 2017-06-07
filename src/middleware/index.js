@@ -35,5 +35,4 @@ const navigationMiddleware = store => next => (action) => {
   ], action, closeView(action, store));
   return next(action);
 };
-
 export default navigationMiddleware;

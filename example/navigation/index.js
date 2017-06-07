@@ -6,7 +6,7 @@ class Navigation extends Component {
     dispatch: PropTypes.func,
   }
   handleOpen(index) {
-    this.props.dispatch({ type: 'OPEN_PAGE', index });
+    this.props.dispatch({ type: 'NAVIGATION_OPEN_PAGE', page: `home${index}`});
   }
   renderList = () => [1,2,3,4]
     .map((element, index)=> (

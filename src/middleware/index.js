@@ -1,4 +1,4 @@
-import navigation from '../';
+import navigation from '../core';
 import * as constants from '../constants';
 import { getPreviousPath, getCurrentPath } from '../selectors';
 
@@ -6,7 +6,7 @@ function actionHandler(type, action, cb) {
   if (!type) return false;
   const actionTypes = type instanceof Array ? type : [type];
   actionTypes.map((actionType) => {
-    if (actionType === action) return cb();
+    if (actionType === action.type && typeof cb === 'function') return cb();
     return false;
   });
   return true;

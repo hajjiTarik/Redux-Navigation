@@ -4,13 +4,13 @@ import navigation from '../../src';
 
 export default class ConfigureStore {
   constructor(preloadedState = {}) {
-    const middlewares = [];
+    const middlewares = [navigation.navigationMiddleware];
     let composeEnhancers = compose;
 
     if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
       composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || composeEnhancers;
     }
-    const enhancer = applyMiddleware(navigation.navigationMiddleware, ...middlewares);
+    const enhancer = applyMiddleware(...middlewares);
     const store = createStore(
       reducer,
       preloadedState,

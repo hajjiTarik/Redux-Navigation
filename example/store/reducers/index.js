@@ -1,4 +1,7 @@
-export default (state = {}, action) => {
+import { combineReducers } from 'redux';
+import router from '../../../src/redux/reducers';
+
+const rootReducer =  (state = {}, action) => {
   switch (action.type) {
     case 'ACTIVE' :
       return { ...state, index: action.index };
@@ -6,3 +9,8 @@ export default (state = {}, action) => {
       return { ...state };
   }
 }
+
+export default combineReducers({
+  rootReducer,
+  router,
+})

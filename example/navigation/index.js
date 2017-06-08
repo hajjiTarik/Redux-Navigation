@@ -1,22 +1,23 @@
 import React, { Component, PropTypes } from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { openPage, closePage } from '../../src/redux/actions';
 
 class Navigation extends Component {
   static PropTypes = {
     dispatch: PropTypes.func,
   }
-  handleOpen(index) {
-    this.props.dispatch({ type: 'NAVIGATION_OPEN_PAGE', page: `home${index}`});
-  }
+
   renderList = () => [1,2,3,4]
     .map((element, index)=> (
-        <li onClick={() => { this.handleOpen(index); }} key={element}>
-          <a href="#">Level {element}</a>
-        </li>
+      <li key={element}>
+        <a onClick={() => { this.props.openPage({ pageId: `home${index}`} ); }} href="#">open {element}</a>
+        <br />
+        <a onClick={() => { this.props.closePage({ pageId: `home${index}`} ); }} href="#">close {element}</a>
+      </li>
       ),
     );
   render() {
-    console.log(this.renderList());
     return (
       <ul>
         {this.props.title}
@@ -26,4 +27,9 @@ class Navigation extends Component {
   }
 }
 
-export default connect(null, null)(Navigation);
+const mapDispatchToProps = (dispatch) => ({
+  openPage: bindActionCreators(openPage, dispatch),
+  closePage: bindActionCreators(closePage, dispatch),
+});
+
+export default connect(null, mapDispatchToProps)(Navigation);

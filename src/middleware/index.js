@@ -19,6 +19,7 @@ function openView({ page }, { dispatch }) {
   };
 }
 function closeView({ page }, store) {
+  console.log(page, store);
   if (!page) return false;
   const prevPath = getPreviousPath(store.getState());
   const currentPath = getCurrentPath(store.getState());

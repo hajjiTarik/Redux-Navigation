@@ -110,13 +110,13 @@ class NavigationManager {
    */
   handleOpen(url) {
     if (!url) return;
+
     const encodeRouterObj = this.encodeRouterObj(url);
     const newUrl = this.updateQueryString(
       window.location.href,
       this.navigationPrefix,
       encodeRouterObj,
     );
-
     this.pushState(newUrl, newUrl);
   }
 
@@ -133,7 +133,6 @@ class NavigationManager {
       encodeRouterObjCurrentUrl,
       encodeRouterObjPrevUrl,
     );
-
     this.pushState(`${location.pathname}${query}`, query);
   }
 }

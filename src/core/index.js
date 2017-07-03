@@ -109,9 +109,6 @@ class NavigationManager {
    * when page is open pushState and update the Query String
    * @param {String} url
    */
-  function a (){
-
-}
   handleOpen(url) {
     if (!url) return;
 

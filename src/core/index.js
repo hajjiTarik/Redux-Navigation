@@ -85,7 +85,8 @@ class NavigationManager {
    * @example getNavigationValue('www.example.com/?nav=eyJwYWdlSWQiOiJGaWx0ZXIifQ==', 'nav')
    * -> eyJwYWdlSWQiOiJGaWx0ZXIifQ
    */
-  getNavigationValue = (url, prefix) => url.split('&')
+  getNavigationValue = (url, prefix) => url
+    .split('&')
     .filter(value => value.indexOf(prefix) >= 0)
     .toString()
     .split(this.navigationPrefix)[1];
@@ -108,6 +109,9 @@ class NavigationManager {
    * when page is open pushState and update the Query String
    * @param {String} url
    */
+  function a (){
+
+}
   handleOpen(url) {
     if (!url) return;
 

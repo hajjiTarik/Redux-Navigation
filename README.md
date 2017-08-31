@@ -1,5 +1,5 @@
 # Redux Navigation
-![build status](https://travis-ci.org/hajjiTarik/Redux-Navigation.svg?branch=develop)(https://travis-ci.org/hajjiTarik/Redux-Navigation)
+[![build status](https://travis-ci.org/hajjiTarik/Redux-Navigation.svg?branch=develop)](https://travis-ci.org/hajjiTarik/Redux-Navigation)
 
 router for react app
 

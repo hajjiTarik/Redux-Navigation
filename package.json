@@ -46,7 +46,7 @@
     "check-es3-syntax-cli": "^0.1.1",
     "cross-env": "^3.2.4",
     "ejs": "^2.5.6",
-    "eslint": "^3.19.0",
+    "eslint": "^4.0.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "babel": "^6.23.0",
-    "eslint": "^3.19.0",
+    "eslint": "^4.0.0",
     "exenv": "^1.2.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

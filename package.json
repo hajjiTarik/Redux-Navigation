@@ -6,7 +6,9 @@
     "build": "cross-env NODE_ENV=production webpack --hide-modules --progress --config config/webpack.module.config.js",
     "build:dev": "cross-env NODE_ENV=development webpack --hide-modules --progress --config config/webpack.public.config.js",
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --quiet --cache --config config/webpack.server.config.js",
-    "lint": "eslint ./src/*/**.js"
+    "lint": "eslint ./src/*/**.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Hajji Tarik",
   "license": "ISC",
@@ -46,7 +48,7 @@
     "check-es3-syntax-cli": "^0.1.1",
     "cross-env": "^3.2.4",
     "ejs": "^2.5.6",
-    "eslint": "^3.19.0",
+    "eslint": "^8.0.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
@@ -54,21 +56,22 @@
     "exenv": "^1.2.2",
     "express": "^4.15.2",
     "html-loader": "^0.4.5",
-    "webpack": "^2.4.1",
+    "webpack": "^4.0.0",
     "webpack-dev-server": "^2.4.2",
     "webpack-merge": "^4.1.0",
     "redux-devtools-extension": "^2.13.2"
   },
   "dependencies": {
     "babel": "^6.23.0",
-    "eslint": "^3.19.0",
+    "eslint": "^8.0.0",
     "exenv": "^1.2.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "webpack": "^2.4.1",
-    "webpack-merge": "^4.1.0"
+    "webpack": "^4.0.0",
+    "webpack-merge": "^4.1.0",
+    "@snyk/protect": "latest"
   },
   "directories": {
     "example": "example"
@@ -81,5 +84,6 @@
   "bugs": {
     "url": "https://github.com/hajjiTarik/react-redux-navigation/issues"
   },
-  "homepage": "https://github.com/hajjiTarik/react-redux-navigation#readme"
+  "homepage": "https://github.com/hajjiTarik/react-redux-navigation#readme",
+  "snyk": true
 }
